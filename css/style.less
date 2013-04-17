@@ -1,0 +1,143 @@
+@import "font-awesome";
+
+@lightblue: #E7EDF0;
+@green: #3FB58E;
+@red: #CB3E21;
+
+@lightergrey: #F4F5F5;
+@lightgrey: #CCC;
+@grey: #D9DDDD;
+@darkgrey: #555;
+@darkestgrey: #3A3C3C;
+
+.transition(@props) {
+  -webkit-transition: @props;
+  -moz-transition: @props;
+  -o-transition: @props;
+  transition: @props;
+}
+.box-sizing( @property ) {
+  -webkit-box-sizing: @property;
+  -moz-box-sizing: @property;
+  -ms-box-sizing: @property;
+  box-sizing: @property;
+}
+.transform( @transformation ) {
+  -webkit-transform: @transformation;
+  -moz-transform: @transformation;
+  -o-transform: @transformation;
+  transform: @transformation;
+}
+.transform-origin( @transformation ) {
+  -webkit-transform-origin: @transformation;
+  -moz-transform-origin: @transformation;
+  -o-transform-origin: @transformation;
+  transform-origin: @transformation;
+}
+
+/*********************************************************
+* Base
+*/
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-size: 100%;
+  background: @lightergrey;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+header {
+  background: white;
+  height: 80px;
+  border-bottom: 1px solid @lightgrey;
+}
+
+.header-nav {
+  line-height: 80px;
+  padding: 0 30px;
+  margin: 0;
+  list-style: none;
+  > li {
+    float: left;
+    margin-right: 1em;
+    padding: 0 20px;
+    &.tab-on {
+      background: @lightergrey;
+    }
+  }
+}
+
+.webmaker-title {
+  padding: 0;
+  font-weight: 700;
+}
+
+.main-search {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid @lightgrey;
+  border-radius: 30px;
+  &:focus {
+    outline: none;
+    border-color: @green;
+  }
+}
+
+.main-splash {
+  position: relative;
+  top: -1px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  > li {
+    background: white;
+    border: 1px solid @lightgrey;
+    .box-sizing( border-box );
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    width: 201px;
+    height: 151px;
+    &.s2 {
+      width: 401px;
+      height: 301px;
+    }
+    &.s3 {
+      width: 601px;
+      height: 451px;
+    }
+    &.flippy {
+      position: relative;
+      .back,
+      .front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .back {
+        background: #FFF;
+        display: none;
+      }
+    }
+  }
+}
+
+/*********************************************************
+* Tabs
+*/
+
+[data-tab] {
+  display: none;
+  &.tab-on {
+    display: block;
+  }
+}

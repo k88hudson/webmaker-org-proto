@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Prototype</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul class="header-nav">
+          <li class="webmaker-title">Webmaker.org</li>
+          <li data-tab-control="make" data-tab-default>Make
+            <select class="make-selector">
+              <option selected value="featured">Featured</option>
+              <option value="remix">A remix</option>
+              <option value="template">From template</option>
+            </select>
+          </li>
+          <li data-tab-control="learn">Learn</li>
+          <li data-tab-control="party">Party</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main tab-container">
+      <div data-tab="make">
+        <ul class="main-splash">
+        </ul>
+      </div> <!-- make -->
+      <div data-tab="learn">
+        Learn
+      </div> <!-- learn -->
+      <div data-tab="party">
+        Party
+      </div> <!-- party -->
+    </div>
+  </div>
+  <script src="src/packery.js"></script>
+  <script src="src/require-jquery.js" data-main="src/main.js"></script>
+</body>
+</html>
+
